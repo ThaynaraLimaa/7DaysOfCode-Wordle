@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --background-color: #1E1E1E;
+    --letters-color: #ffffff;
+    --yellow-logo: #F9FF00;
+    --gray: #585858;
+    --light-gray: #818384;
+    --red-letters-back: #5F0F1D;
+    --yellow-letters-back: #B59F3B;
+    --green-letters-back: #538D4E;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Header */
+header {
+    border-bottom: 2px solid var(--gray);
+    padding: .5em 1em;
+}
+
+.logo-container {
+    background-color: var(--yellow-logo);
+    width: 35px;
+    height: 35px;
+    margin-left: 1em;
+
+    font-weight: bold;
+    font-size: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    max-width: 900px;
+    margin: 1em auto 0;
+}
+
+
+/* Game Board */
+.game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.game-board .row {
+    display: grid;
+    grid-auto-rows: 52px;
+    gap: 3px;
+    grid-template-columns: repeat(5, 52px);
+}
+
+.game-board .letters {
+    border: 1px solid var(--gray);
+}
+
+/* Keyboard */
+.keyboard {
+    margin: 1em auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.keyboard .row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.keyboard .letter,
+.keyboard .action {
+    background-color: var(--light-gray);
+    height: 40px;
+    width: 38px;
+    padding: 5px;
+    border: none;
+
+    font-size: 1.2em;
+    color: var(--letters-color);
+
+    cursor: pointer;
+    transition: filter .3s ease-in;
+}
+
+.keyboard .action {
+    width: 45px;
+}
+
+.keyboard .letter:hover,
+.keyboard .action:hover {
+    filter: brightness(1.5);
+}
+
+footer {
+    color: var(--yellow-logo);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 1em;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 470px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .keyboard .letter,
+    .keyboard .action {
+        height: 30px;
+        width: 28px;
+    }
+    
+    .keyboard .action {
+        width: 35px;
+    }
+}

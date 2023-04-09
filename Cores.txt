@@ -1,0 +1,6 @@
+Background: #1E1E1E
+zinza da caixa: #585858
+amarelo-logo: #F9FF00
+vermelho-letras: #5F0F1D
+amarelo-letras: #B59F3B
+verde-letras: #538D4E
